@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<h1>Arrow Function</h1>
+<p>This demonstrates a regular function, NOT an arrow function.</p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo3"></p>
+<p id="demo4"></p>
+<p id="demo5"></p>
+
+<script>
+
+//This demonstrates a regular function, NOT an arrow function.
+hello = function() {
+    return "Hello, world 1!";
+}
+document.getElementById("demo1").innerHTML = hello();
+
+//A demonstration of a simple arrow function.
+hello = () => {
+    return "Hello World 2!";
+}
+document.getElementById("demo2").innerHTML = hello();
+
+//Arrow Functions Return Value by Default so the above can be shortened even more as follows:
+hello = () => "Hello World 3!";
+document.getElementById("demo3").innerHTML = hello();
+
+//A demonstration of an arrow functiion in one line, with parameters
+hello = (val) => "Hello " + val;
+document.getElementById("demo4").innerHTML = hello("World 4!");
+
+//you can skip the parentheses when you have only one parameter
+hello = val => "Hello " + val;
+document.getElementById("demo5").innerHTML = hello("World 5!");
+
+
+
+</script>
+
+</body>
+</html>
