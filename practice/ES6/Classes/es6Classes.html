@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+/* A class is a type of function, but instead of using the keyword function to initiate it, we use the keyword class, and the properties are assigned inside a constructor() method. */
+
+//A simple class constructor:
+document.write("<h1>A simple CLASS with a CONSTRUCTOR</h1>");
+document.write("<p>class Car {constructor (name) {this.brand = name;}}</p>");
+class Car {
+    constructor (name) {
+        this.brand = name;
+    }
+}
+//Create an object called "mycar" based on the Car class:
+document.write("<h1>Create an object called 'mycar' based on the Car class:</h1>");
+document.write("<p> const mycar = new Car('Ford');</p>");
+const mycar = new Car("Ford");
+document.write(mycar.brand);
+
+</script> 
+
+<script>
+//Methods in Classes
+document.write("<h1>Methods in Classes</h1>");
+class Car2 {
+  constructor(name) {
+    this.brand = name;
+  }
+  
+  present() {
+    return 'I have a ' + this.brand;
+  }
+}
+
+const mycar2 = new Car2("Nissan");
+document.write(mycar2.present());
+
+</script> 
+<script>
+  //Class Inheritance
+  document.write("<h1>Class Inheritance</h1>");
+  class Car3 {
+    constructor(name) {
+      this.brand = name;
+    }
+    
+    present() {
+      return 'I have a ' + this.brand;
+    }
+  }
+  
+  class Model extends Car3 {
+    constructor(name, mod) {
+      super(name);
+      this.model = mod;
+    }
+    show() {
+      return this.present() + ', it is a ' + this.model
+    }
+  }
+  const mycar3 = new Model("Ford", "Mustang");
+  document.write(mycar3.show());
+  
+  </script> 
+</body>
+</html>
+
